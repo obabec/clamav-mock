@@ -4,7 +4,9 @@ Simple mock for Clamav.  Provides a lightweight docker image that mocks Clamav r
 
 This acts as a drop-in replacement for [docker clamav/clamav](https://hub.docker.com/r/clamav/clamav) when used with, for example, the [Ruby gem clamav-client](https://rubygems.org/gems/clamav-client).
 
-The mock will respond to PING, INSTREAM and supports IDSESSION only.
+The mock will respond to PING, INSTREAM.
+
+**This fork supports both IDSESSION and simple session modes, e.g it supports clamd with --multiscan and also without it**
 
 The mock will return an OK response for all files, except the [eicar virus signature](https://www.eicar.org/?page_id=3950).
 
